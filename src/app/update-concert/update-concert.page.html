@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="Retour"></ion-back-button>
+    </ion-buttons>
+    <ion-title>concert-gestion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="padding">
+  <ion-list>
+
+
+
+    <ion-item>
+      <ion-label>Nom</ion-label>
+      <ion-input [(ngModel)]="concertTimeService.input.Nom"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Type</ion-label>
+      <ion-input [(ngModel)]="concertTimeService.input.Type"></ion-input>
+    </ion-item>
+
+
+
+    <ion-item>
+      <ion-label>Date</ion-label>
+      <ion-input type="date" [(ngModel)]="concertTimeService.input.Date"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Salle</ion-label>
+      <ion-input [(ngModel)]="concertTimeService.input.Salle"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Ville</ion-label>
+      <ion-input [(ngModel)]="concertTimeService.input.Ville"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Note</ion-label>
+      <ion-input type="number" min="0" max="5" [(ngModel)]="concertTimeService.input.Date"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Commentaire</ion-label>
+      <ion-textarea></ion-textarea>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-toolbar>
+    <ion-button expand="block" (click)="updateOneConcert()">
+      Enregistrer</ion-button>
+  </ion-toolbar>
+</ion-content>
